@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Round1"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.028">
+  <properties />
+  
+  
+            <testcase name="f" time="0.010" classname="learnconcept.FirstClass" />
+                <testcase name="f" time="0.018" classname="learnconcept.FirstClass" />
+      
+</testsuite>
