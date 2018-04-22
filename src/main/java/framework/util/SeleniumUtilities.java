@@ -210,29 +210,59 @@ public class SeleniumUtilities {
   }
 
   public By locatorValue(String locatorType, String value) {
+	  int caseNum = 0;
+	  if(locatorType.toLowerCase().equals("id"))
+	  {
+		  caseNum=1;
+	  }else if(locatorType.toLowerCase().equals("name"))
+	  {
+		  caseNum=2;
+	  }else if(locatorType.toLowerCase().equals("xpath"))
+	  {
+		  caseNum=3;
+	  }else if(locatorType.toLowerCase().equals("css"))
+	  {
+		  caseNum=4;
+	  }else if(locatorType.toLowerCase().equals("link"))
+	  {
+		  caseNum=5;
+	  }else if(locatorType.toLowerCase().equals("partiallink"))
+	  {
+		  caseNum=6;
+	  }else if(locatorType.toLowerCase().equals("class"))
+	  {
+		  caseNum=7;
+	  }else if(locatorType.toLowerCase().equals("tagName"))
+	  {
+		  caseNum=8;
+	  }
+	  
     By by;
-    switch (locatorType.toLowerCase()) {
-      case "id":
+    switch (caseNum) {
+      case 1:
         by = By.id(value);
         break;
-      case "name":
+      case 2:
         by = By.name(value);
         break;
-      case "xpath":
+      case 3:
         by = By.xpath(value);
         break;
-      case "css":
+      case 4:
         by = By.cssSelector(value);
         break;
-      case "link":
+      case 5:
         by = By.linkText(value);
         break;
-      case "partiallink":
+      case 6:
         by = By.partialLinkText(value);
         break;
-      case "class":
+      case 7:
       by= By.className(value);
       break;
+      case 8:
+          by= By.tagName(value);
+          break;
       default:
         by = null;
         break;
